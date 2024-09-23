@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+/* basic css reset */
+:root{
+    --pink:#FF0077;
+    --pink-purple:#E33AAA;
+    --orange:#FF776C;
+    --purple:#B889FF;
+    --dark-blue:#65C5FF;
+    --light-blue:#24F4FF;
+    --basic-border:2px black solid;
+}
+*,*::before,*::after{
+    box-sizing:border-box;
+}
+*{
+    margin:0;
+    overflow:auto;
+    font-family:"Ubuntu Mono";
+    /* position:relative; */
+}
+img{
+    display:block;
+    max-width:100%;
+}
+p{
+    font-family:"Ubuntu Mono";
+}
+
+/*All the cool link color shenigans*/
+a{
+    font-family:"Courier Prime";
+}
+a:link{
+    color:var(--light-blue);
+}
+a:visited{
+    color:var(--light-blue);
+}
+a:hover{
+    color:var(--dark-blue);
+}
+a:active{
+    color:var(--pink-purple);
+}
+
+/*Flex-Basic flex container setup*/
+.flex{
+    max-height:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+    padding:1rem;
+    overflow:auto;
+}
+
+/*Background setup*/
+.background{
+    background-image:linear-gradient(var(--light-blue),var(--dark-blue) 60%,var(--purple) 94%,var(--pink-purple) 100%);
+    position:fixed;
+    top:0;
+    width:100vw;
+    height:100vh;
+    z-index:-100;
+}
+
+/*General Button Setup*/
+.button{
+    border-radius:10px;
+    padding:5px 10px;
+    background-color:var(--orange);
+    border:var(--basic-border);
+    display:block;
+}
+
+/*Category Style*/
+.category{
+    border-radius:10px;
+    padding:5px 10px;
+    background-color:var(--pink);
+    color:var(--orange);
+    border:var(--basic-border);
+    display:block;
+    margin:70px 0 10px 0;
+    width:fit-content;
+    font-size:2rem;
+    font-family:"Courier Prime";
+    font-weight:600;
+
+}
+
+/*Main Header-Top of all screens*/
+.mainHeader{
+    max-height:14vh;
+    min-height:85px;
+    background-color:var(--pink);
+    /*an attempt to fix the navbar at the top of the screen
+    the problem is that it makes an empty area under it.*/
+    /* position:sticky; */
+    /* top:0; */
+    width:100%;
+    overflow:hidden;
+    z-index:10;
+}
+.mainHeader .home{
+    justify-content:left;
+    font-size:2rem;
+    font-weight:700;
+}
+.mainHeader .title{
+    font-family:courier;
+    margin:0 auto;
+    font-size:3rem;
+    font-weight:600;
+    color:var(--purple);
+}
+.mainHeader .button{
+    background-color:var(--orange);
+}
+
+/*Footer Section*/
+.footer{
+    position:fixed;
+    bottom:0;
+    /* width:100%; */
+    z-index:10;
+}
+
+/*Start of the content styles*/
+/*About Page content*/
+.about{
+    padding:10px;
+    margin:2px;
+    text-align:center;
+}
+.about .title{
+    font-family:"Courier Prime";
+    font-size:3rem;
+    padding:10px;
+}
+.about .text{
+    font-family:"Ubuntu Mono";
+    padding:10px 20px;
+}
+.about .return{
+    width:fit-content;
+    margin:15px auto;
+    background-color:var(--orange);
+}
+
+/*Main page*/
+/*Hero section-For the deal of the day*/
+.hero{
+    max-height:50vh;
+    background-color:var(--purple);
+    max-height:300px;
+    justify-content:space-between;
+    border:1px hidden;
+    border-radius:25px;
+    margin:2px 5px;
+}
+.hero .left{
+    font-size:4.5rem;
+    max-width:25vw;
+    text-align:left;
+    color:var(--pink);
+}
+.hero .middle{
+    text-align:bottom;
+}
+.hero .right{
+    font-size:3.5rem;
+    max-width:20vw;
+    text-align:right;
+    color:var(--pink);
+}
+
+/*Combo items*/
+.h-Items{
+    overflow-x:scroll;
+    overflow-y:hidden;
+    white-space:nowrap;
+    /* width:100%; */
+    background:linear-gradient(90deg, var(--pink), var(--pink-purple) 82%, var(--orange) 100%);
+    margin:0 0 70px 0;
+    border:var(--basic-border);
+}
+.h-Items .item{
+    height:250px;
+    width:400px;
+    display:inline-block;
+    border:var(--basic-border);
+    border-radius:60px;
+    position:relative;
+    margin:23px 10px;
+    overflow:hidden;
+}
+.h-Items .item p{
+    position:absolute;
+    top:10%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:1.25rem;
+}
+.h-Items .item p.down{
+    top:90%;
+    font-weight: 600;
+    font-size:2rem;
+}
+.h-Items .item img{
+    width:300px;
+    height:150px;
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translate(50px,45px);
+}
+
+/*A bunch of different Item styles*/
+.item .button{
+    position:absolute;
+    bottom:0;
+    right:0;
+    transform:translate(0,0);
+    background-color:var(--dark-blue);
+    color:var(--pink-purple);
+    border:var(--basic-border);
+    width:fit-content;
+    height:fit-content;
+}
+.item.blue{
+    background-color:var(--light-blue);
+    color:var(--purple);
+}
+.item.purple{
+    background-color:var(--purple);
+    color:var(--light-blue);
+}
