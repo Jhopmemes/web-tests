@@ -4,14 +4,42 @@
 
 /* basic css reset */
 :root{
+    /*Current colors*/
     --pink:#FF0077;
     --pink-purple:#E33AAA;
     --orange:#FF776C;
     --purple:#B889FF;
     --dark-blue:#65C5FF;
     --light-blue:#24F4FF;
+    /*Replacment colors*/
+    --r-light-blue:#00D2FC;
+    --r-medium-blue:#009EFA;
+    --r1-dark-blue:#004CB6;
+    /*Contrast approves colors*/
+    --c-pink:#F50072;
+    --c-light-teal:#4FFBDF;
+    /*Shark themed colors*/
+    --s-white:#FFFFFF;
+    --s-gray-red:#B63C43;
+    --s-red:#CF0C0C;
+    --s-light-blue:#CCECF2;
+    --s-blue:#98D2D9;
+    --s-gray:#809FA5;
+    --s-header-red:#BF0909;
+    --s-title-blue:#6FBDEA;
+    --s-link-red:#FF0000;
+    --s-dark-blue:#0045A5;
+    --s-dark-red:#990909;
+    --s-dark-gray:#54686C;
+
+    /*Border*/
     --basic-border:2px black solid;
+    --bubble-border:2px white solid;
 }
+
+
+
+
 *,*::before,*::after{
     box-sizing:border-box;
 }
@@ -34,10 +62,12 @@ a{
     font-family:"Courier Prime";
 }
 a:link{
-    color:var(--light-blue);
+    /* color:var(--light-blue); */
+    color:var(--s-link-red);
 }
 a:visited{
-    color:var(--light-blue);
+    /* color:var(--light-blue); */
+    color:var(--s-link-red);
 }
 a:hover{
     color:var(--dark-blue);
@@ -59,7 +89,8 @@ a:active{
 
 /*Background setup*/
 .background{
-    background-image:linear-gradient(var(--light-blue),var(--dark-blue) 60%,var(--purple) 94%,var(--pink-purple) 100%);
+    background-image: linear-gradient(var(--light-blue), var(--dark-blue) 30%, var(--r-medium-blue) 94%, var(--r1-dark-blue) 100%);
+    /* background-image:linear-gradient(var(--light-blue),var(--dark-blue) 60%,var(--purple) 94%,var(--pink-purple) 100%); */
     position:fixed;
     top:0;
     width:100vw;
@@ -71,7 +102,8 @@ a:active{
 .button{
     border-radius:10px;
     padding:5px 10px;
-    background-color:var(--orange);
+    /* background-color:var(--orange); */
+    background-color:var(--s-blue);
     border:var(--basic-border);
     display:block;
 }
@@ -80,11 +112,11 @@ a:active{
 .category{
     border-radius:10px;
     padding:5px 10px;
-    background-color:var(--pink);
-    color:var(--orange);
+    background-color:var(--r1-dark-blue);
+    color:var(--s-title-blue);
     border:var(--basic-border);
     display:block;
-    margin:70px 0 10px 0;
+    margin:70px 5px 10px 5px;
     width:fit-content;
     font-size:2rem;
     font-family:"Courier Prime";
@@ -96,7 +128,8 @@ a:active{
 .mainHeader{
     max-height:14vh;
     min-height:85px;
-    background-color:var(--pink);
+    /* background-color:var(--pink); */
+    background-color:var(--s-header-red);
     /*an attempt to fix the navbar at the top of the screen
     the problem is that it makes an empty area under it.*/
     /* position:sticky; */
@@ -113,12 +146,15 @@ a:active{
 .mainHeader .title{
     font-family:courier;
     margin:0 auto;
-    font-size:3rem;
+    font-size:3.5rem;
     font-weight:600;
-    color:var(--purple);
+    /* color:var(--purple); */
+    color:var(--s-title-blue);
 }
 .mainHeader .button{
-    background-color:var(--orange);
+    /* background-color:var(--orange); */
+    background-color:var(--s-blue);
+    border:var(--bubble-border);
 }
 
 /*Footer Section*/
@@ -148,44 +184,59 @@ a:active{
 .about .return{
     width:fit-content;
     margin:15px auto;
-    background-color:var(--orange);
 }
 
 /*Main page*/
 /*Hero section-For the deal of the day*/
 .hero{
     max-height:50vh;
-    background-color:var(--purple);
+    /* background-color:var(--purple); */
+    background-color:var(--s-gray);
     max-height:300px;
     justify-content:space-between;
-    border:1px hidden;
+    /* border:1px hidden; */
+    border:var(--basic-border);
     border-radius:25px;
     margin:2px 5px;
 }
 .hero .left{
-    font-size:4.5rem;
-    max-width:25vw;
+    font-size:2rem;
+    width:fit-content;
     text-align:left;
-    color:var(--pink);
+    /* color:var(--pink); */
+    color:var(--s-dark-blue);
 }
 .hero .middle{
-    text-align:bottom;
+    text-align:center;
+    font-size:3rem;
+    color:var(--c-light-teal);
+    max-width:60%;
+    font-weight:600;
+    height:auto;
 }
+.hero .middle .one{
+    color:var(--s-red);
+}
+.hero .middle .two{
+    color:var(--s-dark-blue);
+}
+
 .hero .right{
-    font-size:3.5rem;
-    max-width:20vw;
+    font-size:2.5rem;
+    max-width:20%;
     text-align:right;
-    color:var(--pink);
+    /* color:var(--pink); */
+    color:var(--s-dark-red);
 }
 
 /*Combo items*/
 .h-Items{
-    overflow-x:scroll;
+    overflow-x:auto;
     overflow-y:hidden;
     white-space:nowrap;
     /* width:100%; */
-    background:linear-gradient(90deg, var(--pink), var(--pink-purple) 82%, var(--orange) 100%);
-    margin:0 0 70px 0;
+    background:linear-gradient(90deg, var(--s-dark-gray), var(--s-gray) 50%, var(--s-light-blue) 90%, var(--s-white) 100%);
+    margin:0;
     border:var(--basic-border);
 }
 .h-Items .item{
@@ -210,6 +261,11 @@ a:active{
     font-weight: 600;
     font-size:2rem;
 }
+.h-Items .item p.up{
+    top:10%;
+    font-weight: 600;
+    font-size:2rem;
+}
 .h-Items .item img{
     width:300px;
     height:150px;
@@ -217,6 +273,10 @@ a:active{
     top:0;
     left:0;
     transform:translate(50px,45px);
+    border-radius:10px;
+}
+.h-Items .hide{
+    display:none;
 }
 
 /*A bunch of different Item styles*/
@@ -232,10 +292,10 @@ a:active{
     height:fit-content;
 }
 .item.blue{
-    background-color:var(--light-blue);
-    color:var(--purple);
+    background-color:var(--r-medium-blue);
+    color:var(--s-dark-red);
 }
 .item.purple{
-    background-color:var(--purple);
+    background-color:var(--r1-dark-blue);
     color:var(--light-blue);
 }
