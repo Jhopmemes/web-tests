@@ -267,7 +267,7 @@ a:active{
     font-size:2rem;
 }
 .h-Items .item img{
-    width:300px;
+    width:auto;
     height:150px;
     position:absolute;
     top:0;
@@ -277,6 +277,38 @@ a:active{
 }
 .h-Items .hide{
     display:none;
+}
+
+/*Different categories image placments*/
+.h-Items.drinks .one img{
+    transform:translate(155px,45px);
+}
+.h-Items.drinks .two img{
+    transform:translate(155px,45px);
+}
+.h-Items.drinks .three img{
+    transform:translate(175px,45px);
+}
+.h-Items.dishes .one img{
+    transform:translate(115px,35px);
+}
+.h-Items.dishes .two img{
+    transform:translate(125px,45px);
+}
+.h-Items.dishes .three img{
+    transform:translate(125px,45px);
+}
+.h-Items.extras .one img{
+    transform:translate(105px,35px);
+}
+.h-Items.extras .two img{
+    transform:translate(60px,45px);
+}
+.h-Items.extras .three img{
+    transform:translate(170px,45px);
+}
+.h-Items.extras .four img{
+    transform:translate(160px,45px);
 }
 
 /*A bunch of different Item styles*/
